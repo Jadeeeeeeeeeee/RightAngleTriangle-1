@@ -1,3 +1,4 @@
+#Instructions for the user to use
 def instructions():
   print("Instructions:")
   print("Choose what you want to solve for eg. missing side / missing angle.")

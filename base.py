@@ -1,6 +1,6 @@
 def menu():
 
-  print("**********************************************************************\n**Welcome to rignt angle triangle solver, what would you like to do?**\n**********************************************************************")
+  print("Welcome to rignt angle triangle solver, what would you like to do?")
 
   while True:
     print("\nOptions:")
@@ -30,7 +30,7 @@ def menu():
 def instructions():
   print("Instructions:")
   print("Choose what you want to solve for eg. missing side / missing angle.")
-  print("Input whatever is the numbers that you have.")
+  print("Input the numbers that you have.")
   print("Solve.")
   print("Type 3 or History in the menu to view calculation history.")
   print("Type 4 or quit on the menu to quit solving.")
