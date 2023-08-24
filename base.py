@@ -4,8 +4,17 @@ def menu():
 
   print("******************************************\n**Welcome to rignt angle triangle solver**\n******************************************")
 
+  want_instructions = string_checker("\nDo you want to read the instructions (yes/no):",1 ,response_choices)
+
+  if want_instructions == "yes":
+    instructions()
+
+  else:
+     print("")
+     pass
+
   while True:
-    print("\nMenu:\n1. Solve Triangle\n2. Quit\nWhat would you like to do?:")
+    print("\nMenu:\n1. Solve for missing side(you have 2 sides)\n2. Quit\nWhat would you like to do?:")
     
 
     response = input().lower()
@@ -19,6 +28,31 @@ def menu():
 
     else:
       print("Please pick a valid option, either the number or the word")
+
+
+def string_checker(question, num_letters, valid_response):
+
+  error = "Please choose {} or {}".format(valid_response[0],valid_response[1])
+
+  if num_letters == 1:
+    short_version = 1
+
+  else:
+    short_version = 2
+  
+
+  while True:
+    response = input(question).lower()
+
+    for item in valid_response:
+      if valid_response == item[:short_version] or response == item:
+        return item
+
+
+    print(error)
+#Instructions for the user to use
+#Main routine
+
 
 def instructions():
   print("Instructions:")
@@ -68,6 +102,8 @@ def calculate_missing_side():
 
     print(f"\nResults:\nside a: {side_b}\n{Angle_A} \nAngle B: {Angle_B}")
   
+
+response_choices = ["yes", "no"]
 
 menu()
     

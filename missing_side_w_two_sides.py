@@ -1,7 +1,7 @@
 import math 
 
 
-def calculate_missing_side_a():
+def solve_missing_side():
 
   missing_side = input("What side are you missing(a/b/c)?").lower()
 
@@ -42,7 +42,7 @@ def calculate_missing_side_a():
     print(f"\nResults:\nside a: {side_b}\n{Angle_A} \nAngle B: {Angle_B}")
   
 
-calculate_missing_side_a()
+solve_missing_side()
     
     
     
