@@ -3,9 +3,7 @@ def menu():
   print("******************************************\n**Welcome to rignt angle triangle solver**\n******************************************")
 
   while True:
-    print("\nOptions:")
-    print("1. Solve Triangle")
-    print("2. Quit")
+    print("\nOptions:\n1. Solve Triangle\n2. Quit")
 
     response = input().lower()
 

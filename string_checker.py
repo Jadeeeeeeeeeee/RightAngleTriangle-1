@@ -26,5 +26,5 @@ response_choices = ["yes", "no"]
 
 want_instructions = string_checker("Do you want to view the instructions(y/n)?:", 1,response_choices)
 
-if want_instructions == "yes" or want_instructions == y:
+if want_instructions == "yes" or want_instructions == "y":
   instructions()
