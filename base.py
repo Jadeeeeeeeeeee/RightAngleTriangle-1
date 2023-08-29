@@ -1,12 +1,44 @@
 import math
 
+def string_checker(question, num_letters, valid_response):
+
+  error = "Please choose {} or {}".format(valid_response[0],valid_response[1])
+
+  if num_letters == 1:
+    short_version = 1
+
+  else:
+    short_version = 2
+  
+
+  while True:
+    response = input(question).lower()
+
+    for item in valid_response:
+      if valid_response == item[:short_version] or response == item:
+        return item
+
+
+    print(error)
+
+def num_check(question):
+
+  while True:
+
+    try:
+      response = float(input(question))
+      return response
+
+    except ValueError:
+      print("Please enter a number")
+
 def menu():
 
   print("******************************************\n**Welcome to rignt angle triangle solver**\n******************************************")
 
   want_instructions = string_checker("\nDo you want to read the instructions (yes/no):",1 ,response_choices)
 
-  if want_instructions == "yes":
+  if want_instructions == "yes" or want_instructions == "y":
     instructions()
 
   else:
@@ -30,30 +62,8 @@ def menu():
       print("Please pick a valid option, either the number or the word")
 
 
-def string_checker(question, num_letters, valid_response):
-
-  error = "Please choose {} or {}".format(valid_response[0],valid_response[1])
-
-  if num_letters == 1:
-    short_version = 1
-
-  else:
-    short_version = 2
-  
-
-  while True:
-    response = input(question).lower()
-
-    for item in valid_response:
-      if valid_response == item[:short_version] or response == item:
-        return item
-
-
-    print(error)
 #Instructions for the user to use
 #Main routine
-
-
 def instructions():
   print("Instructions:")
   print("Choose what you want to solve for eg. missing side / missing angle.")
@@ -69,8 +79,8 @@ def calculate_missing_side():
   
   if missing_side == "a":
 
-    side_b = float(input("side b:"))
-    side_c = float(input("side c:"))
+    side_b = num_check("side b:")
+    side_c = num_check("side c:")
  
     side_a = (math.sqrt(side_c**2 - side_b**2))
     angle_A = math.degrees(math.asin(side_b / side_c))
@@ -81,29 +91,29 @@ def calculate_missing_side():
 
   elif missing_side == "b":
 
-    side_a = float(input("side a:"))
-    side_c = float(input("side c:"))
+    side_a = num_check("side a:")
+    side_c = num_check("side c:")
 
     side_b = (math.sqrt(side_c**2 - side_a**2))
-    Angle_A = math.degrees(math.asin(side_a / side_c))
+    Angle_A = math.degrees(math.acos(side_a / side_c))
 
     Angle_B = (90 - Angle_A)
 
     print(f"\nResults:\nside a: {side_b}\nAngle A:{Angle_A} \nAngle B: {Angle_B}")
 
   else:
-    side_a = float(input("side a:"))
-    side_b = float(input("side c:"))
+    side_a = num_check("side a:")
+    side_b = num_check("side c:")
 
-    side_c = (math.sqrt(side_a**2 - side_b**2))
-    Angle_A = math.degrees(math.asin(side_a / side_b))
+    side_c = (math.sqrt(side_b**2 - side_a**2))
+    Angle_A = math.degrees(math.atan(side_a / side_b))
 
     Angle_B = (90 - Angle_A)
 
     print(f"\nResults:\nside a: {side_b}\n{Angle_A} \nAngle B: {Angle_B}")
   
 
-response_choices = ["yes", "no"]
+response_choices = ["yes", "y", "no","n" ]
 
 menu()
     

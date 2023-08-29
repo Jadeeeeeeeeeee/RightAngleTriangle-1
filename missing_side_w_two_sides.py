@@ -24,7 +24,7 @@ def solve_missing_side():
     side_c = float(input("side c:"))
 
     side_b = (math.sqrt(side_c**2 - side_a**2))
-    Angle_A = math.degrees(math.asin(side_a / side_c))
+    Angle_A = math.degrees(math.acos(side_a / side_c))
 
     Angle_B = (90 - Angle_A)
 
@@ -34,8 +34,8 @@ def solve_missing_side():
     side_a = float(input("side a:"))
     side_b = float(input("side c:"))
 
-    side_c = (math.sqrt(side_a**2 - side_b**2))
-    Angle_A = math.degrees(math.asin(side_a / side_b))
+    side_c = (math.sqrt(side_b**2 - side_a**2))
+    Angle_A = math.degrees(math.atan(side_a / side_b))
 
     Angle_B = (90 - Angle_A)
 
