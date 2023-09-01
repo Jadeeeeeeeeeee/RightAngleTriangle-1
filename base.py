@@ -32,11 +32,12 @@ def num_check(question):
     except ValueError:
       print("Please enter a number")
 
+
 def menu():
 
   print("******************************************\n**Welcome to rignt angle triangle solver**\n******************************************")
 
-  want_instructions = string_checker("\nDo you want to read the instructions (yes/no):",1 ,response_choices)
+  want_instructions = string_checker("\nWould you like to the view instructions? (yes/no):",1 ,response_choices)
 
   if want_instructions == "yes" or want_instructions == "y":
     instructions()
@@ -46,12 +47,12 @@ def menu():
      pass
 
   while True:
-    print("\nMenu:\n1. Solve for missing side(you have 2 sides)\n2. Quit\nWhat would you like to do?:")
+    print("\n------------\n|-_-Menu-_-|\n------------\n1. Solve for missing side(you have 2 sides)\n2. Quit\nWhat would you like to do?(1/2):")
     
 
     response = input().lower()
 
-    if response == "1" or response == "Solve Triangle":
+    if response == "1" or response == "Solve for missing side":
       calculate_missing_side()
 
     elif response == "2" or response == "Quit":
@@ -65,12 +66,12 @@ def menu():
 #Instructions for the user to use
 #Main routine
 def instructions():
-  print("Instructions:")
-  print("Choose what you want to solve for eg. missing side / missing angle.")
-  print("Input whatever is the numbers that you have.")
-  print("Solve.")
-  print("Type 3 or History in the menu to view calculation history.")
-  print("Type 4 or quit on the menu to quit solving.")
+  print("\n------------------------\n|-_-_-Instructions-_-_-|\n------------------------")
+  print("\n•Choose what you want to solve for eg. missing side / missing angle.")
+  print("•Input whatever is the numbers that you have.")
+  print("•Solve.")
+  print("•Type 3 or History in the menu to view calculation history.")
+  print("•Type 4 or quit on the menu to quit solving.\n")
 
 def calculate_missing_side():
 
@@ -113,7 +114,7 @@ def calculate_missing_side():
     print(f"\nResults:\nside a: {side_b}\n{Angle_A} \nAngle B: {Angle_B}")
   
 
-response_choices = ["yes", "y", "no","n" ]
+response_choices = ["yes", "no", "n","y" ]
 
 menu()
     
