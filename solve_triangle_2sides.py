@@ -1,7 +1,7 @@
 import math 
 
 
-def solve_missing_side():
+def solve_triangle_two_sides():
 
   missing_side = input("What side are you missing(a/b/c)?").lower()
 
@@ -42,7 +42,7 @@ def solve_missing_side():
     print(f"\nResults:\nside a: {side_b}\n{Angle_A} \nAngle B: {Angle_B}")
   
 
-solve_missing_side()
+solve_triangle_two_sides()
     
     
     

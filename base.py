@@ -30,7 +30,7 @@ def num_check(question):
       return response
 
     except ValueError:
-      print("Please enter a number")
+      print("\nPlease enter a number")
 
 
 def menu():
@@ -47,7 +47,7 @@ def menu():
      pass
 
   while True:
-    print("\n------------\n|-_-Menu-_-|\n------------\n1. Solve for missing side(you have 2 sides)\n2. Quit\nWhat would you like to do?(1/2):")
+    print("\n------------\n|-_-Menu-_-|\n------------\n1. Solve triangle(you have 2 sides)\n2. Quit\nWhat would you like to do?(1/2):")
     
 
     response = input().lower()
@@ -66,12 +66,7 @@ def menu():
 #Instructions for the user to use
 #Main routine
 def instructions():
-  print("\n------------------------\n|-_-_-Instructions-_-_-|\n------------------------")
-  print("\n•Choose what you want to solve for eg. missing side / missing angle.")
-  print("•Input whatever is the numbers that you have.")
-  print("•Solve.")
-  print("•Type 3 or History in the menu to view calculation history.")
-  print("•Type 4 or quit on the menu to quit solving.\n")
+  print("\n------------------------\n|-_-_-Instructions-_-_-|\n------------------------\n•Choose what you are given e.g. two sides / side and angle.\n•Input the given sides or given side and angle then solve.\n•Type quit in the menu to end the session and view calculation history.")
 
 def calculate_missing_side():
 

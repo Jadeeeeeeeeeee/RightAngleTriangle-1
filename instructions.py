@@ -23,7 +23,7 @@ def string_checker(question, num_letters, valid_response):
 #Main routine
 
 def instructions():
-  print("==============\n=Instructions=\n==============\n• Choose what you are solving for (missing side/missing angle)\n• Input the given sides/angles\n• Solve  ")
+  print("\n------------------------\n|-_-_-Instructions-_-_-|\n------------------------\n•Choose what you are given e.g. two sides / side and angle\n•Input the given sides or given side and angle then solve.\n•Type quit in the menu to end the session and view calculation history")
 
 response_choices = ["yes", "no"]
 
