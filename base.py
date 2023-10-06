@@ -80,38 +80,45 @@ def menu():
 def instructions():
   print("\n------------------------\n|-_-_-Instructions-_-_-|\n------------------------\n•Choose what you are given e.g. two sides / side and angle.\n•Input the given sides or given side and angle then solve.\n•Type quit in the menu to end the session and view calculation history.")
 
-def solve_triangle_2_sides():
+def solve_triangle_two_sides():
 
-  missing_side = string_checker("\nWhich side do you not have?",3 ,side_choices).lower()
-
+  missing_side = input("What side are you missing(a/b/c)?").lower()
   
   if missing_side == "a":
 
-    side_b = num_check("side b:")
-    side_c = num_check("side c:")
+    side_b = float(input("side b:"))
+    side_c = float(input("side c:"))
  
     side_a = (math.sqrt(side_c**2 - side_b**2))
-    Angle_A = math.degrees(math.asin(side_b / side_c))
+    angle_A = math.degrees(math.asin(side_b / side_c))
+
+    Angle_B = (90 - angle_A)
+
+    print(f"\nResults:\nside a: {side_a}\nside b: {side_b}\nside c: {side_c}\nangle_A: {angle_A} \nAngle B: {Angle_B}")
 
   elif missing_side == "b":
 
-    side_a = num_check("side a:")
-    side_c = num_check("side c:")
+    side_a = float(input("side a:"))
+    side_c = float(input("side c:"))
 
     side_b = (math.sqrt(side_c**2 - side_a**2))
     Angle_A = math.degrees(math.acos(side_a / side_c))
 
+    Angle_B = (90 - Angle_A)
+
+    print(f"\nResults:\nside a: {side_a}\nside b: {side_b}\nside c: {side_c}\nangle_A: {angle_A} \nAngle B: {Angle_B}")
 
   else:
-    side_a = num_check("side a:")
-    side_b = num_check("side b:")
+    side_a = float(input("side a:"))
+    side_b = float(input("side c:"))
 
     side_c = (math.sqrt(side_b**2 - side_a**2))
     Angle_A = math.degrees(math.atan(side_a / side_b))
 
-  Angle_B = (90 - Angle_A)
-  print(f"\nResults:\nside a: {side_b}\n{Angle_A} \nAngle B: {Angle_B}")
+    Angle_B = (90 - Angle_A)
 
+    print(f"\nResults:\nside a: {side_a}\nside b: {side_b}\nside c: {side_c}\nangle_A: {angle_A} \nAngle B: {Angle_B}")
+  
 def solve_triangle_angle_side():    
     ask_for_side = string_checker("Which side do you have?: ", 3, side_choices )
     given_side = float(input(f"Please input side {ask_for_side}: "))
