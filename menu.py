@@ -21,4 +21,7 @@ def instructions():
   print("Instructions:")
 
 def solve_triangle_2_sides():
-  
+  print("Solve triangle with two sides")
+
+def solve_triangle_angle_side():
+  print("Solve triangle with side and angle")
