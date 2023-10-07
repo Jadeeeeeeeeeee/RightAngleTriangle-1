@@ -1,4 +1,4 @@
-import solve_triangle_2sides
+import base
 
 
 
